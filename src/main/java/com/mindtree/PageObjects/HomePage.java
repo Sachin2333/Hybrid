@@ -1,5 +1,6 @@
 package com.mindtree.PageObjects;
 
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -15,5 +16,6 @@ public class HomePage
 		PageFactory.initElements(rdriver, this);
 		ldriver.manage().window().maximize();
 		ldriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 	}
 }

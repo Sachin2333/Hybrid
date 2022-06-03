@@ -37,4 +37,43 @@ public class LoginPage
 		loginclk.click();
 	}	
 	
-}
+
+	@FindBy(xpath="//a[@class='login-link authentication_popup']")
+	@CacheLookup
+	WebElement popupwindow;
+	
+	public void popUpWindow()
+	{
+     popupwindow.click();
+	}
+		
+	@FindBy(xpath=("(//input[@id='spree_user_email'])[2]"))
+    @CacheLookup
+    WebElement textemail;
+    
+    public void textEmail()
+    {
+    	textemail.click();
+    	textemail.sendKeys("Sachin@5130");
+    }
+    
+    @FindBy(xpath=("(//input[@id='spree_user_password'])[3]"))
+    @CacheLookup
+    WebElement textpassword;
+    
+    public void textPassword()
+    {
+    	textpassword.click();
+    	textpassword.sendKeys("Sachin5130");
+    }
+    
+    @FindBy(xpath=("(//input[@id='ul_site_login'])"))
+    @CacheLookup
+    WebElement clicklogin;
+    
+    public void clickLogin()
+    {
+    	clicklogin.click();
+    }
+   
+    }

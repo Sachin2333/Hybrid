@@ -7,17 +7,31 @@ import com.mindtree.PageObjects.LoginPage;
 public class TC_LoginPage extends BaseClass
 {
 	@Test
-	public void loginpage()
+	public void loginpage() throws InterruptedException
 	{
-		LoginPage lp=new LoginPage(driver);
+		LoginPage pk=new LoginPage(driver);
 		log.info("Home page open successfully");
 		
-		lp.loginHover();
+		pk.loginHover();
 		log.info("Login window hover successfully");
 		
-		lp.loginClk();
+		pk.loginClk();
 		log.info("click on login btn successfully");
 		
+		pk.popUpWindow();
+		log.info("go to pop up windowsucessfully");
+		
+	    Thread.sleep(5000);
+	    pk.textEmail();
+		log.info("email send sucessfully");
+		
+		pk.textPassword();
+		log.info("password send sucessfully");
+		
+		pk.clickLogin();
+		log.info("login sucessfully");
+		
+			
 	}
 	
 
